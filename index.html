@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prem Kumar | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f2027;
+      background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+      color: white;
+      line-height: 1.6;
+      padding: 2rem;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    section {
+      margin: 3rem 0;
+      padding: 0rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #00ffff;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      perspective: 1000px;
+    }
+
+    .inner {
+      position: relative;
+      width: 100%;
+      height: 260px;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .card:hover .inner {
+      transform: rotateY(180deg);
+    }
+
+    .front, .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .front {
+      background: #1e3c72;
+      background: linear-gradient(to right, #2a5298, #1e3c72);
+    }
+
+    .back {
+      background: #3a6073;
+      background: linear-gradient(to right, #3a6073, #16222a);
+      transform: rotateY(180deg);
+    }
+
+    .back a {
+      color: #00ffff;
+      margin-top: 0.5rem;
+    }
+
+    .skills-list, .certificates-list, .sports-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .tag {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid #00ffff;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+    }
+
+    .resume {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .resume a {
+      display: inline-block;
+      background-color: #00ffff;
+      color: #000;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .resume a:hover {
+      background-color: #00cccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Name Header -->
+<header style="text-align: center; padding: 1rem 0; background: #07a5e9; color: #010909; font-size: 2rem; font-weight: bold;">
+  Prem Kumar
+</header>
+
+<!-- Navigation Bar -->
+<nav style="position: sticky; top: 0; background: #111; padding: 1rem 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.5);">
+  <ul style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; list-style: none; margin: 0; padding: 0;">
+    <li><a href="#about" style="color:#00ffff; text-decoration:none;">Home</a></li>
+    <li><a href="#skills" style="color:#00ffff; text-decoration:none;">Skills</a></li>
+    <li><a href="#projects" style="color:#00ffff; text-decoration:none;">Projects</a></li>
+    <li><a href="#internships" style="color:#00ffff;">Internships</a></li>
+    <li><a href="#certificates" style="color:#00ffff; text-decoration:none;">Certificates</a></li>
+    <li><a href="#sports" style="color:#00ffff; text-decoration:none;">Sports</a></li>
+    <li><a href="#resume" style="color:#00ffff; text-decoration:none;">Resume</a></li>
+    <li><a href="#contact" style="color:#00ffff; text-decoration:none;">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="about">  
+  <!-- About Me -->
+<section style="max-width: 1000px; margin: auto; padding: 2rem 1rem;">
+  <h2 class="section-title">About Me</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: center;">
+
+    <!-- Photo (Square) -->
+    <div style="flex: 1; min-width: 250px; text-align: center;">
+      <img src="images\IMG_20241108_142017.jpg" alt="Prem Kumar" style="width: 100%; max-width: 250px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.4);">
+    </div>
+
+    <!-- About Text -->
+    <div style="flex: 2; min-width: 280px;">
+      <p>
+        Hi, I'm <strong>Prem Kumar</strong>, an Electronics and Communication Engineering student passionate about IoT, drones, embedded systems.
+      </p>
+      <p>
+        I love building real-time tech projects like surveillance drones and smart homes, and I actively solve JAVA problems using Java on platforms like LeetCode. My vision is to innovate in automation and smart electronics.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="skills">  
+<!-- Skills & Tech -->
+<section>
+  <h2 class="section-title">Skills & Technologies</h2>
+    <div class="skills-list">
+      <div class="tag">HTML</div>
+      <div class="tag">CSS</div>
+      <div class="tag">JavaScript</div>
+      <div class="tag">Java</div>
+      <div class="tag">IoT</div>
+      <div class="tag">Drone Systems</div>
+      <div class="tag">Arduino</div>
+      <div class="tag">GitHub</div>
+    </div>
+  </section>
+
+  <section id="projects"> 
+<!-- Projects -->
+<section>
+  <h2 class="section-title">Projects</h2>
+  <div class="grid">
+    
+    <!-- Surveillance Drone Project -->
+    <div class="card">
+      <div class="inner">
+        <div class="front" style="background-color: #000;">
+          <img src="images\DRONE.png" alt="Surveillance Drone" style="width:100%; height:150px; object-fit:cover; border-radius:10px;">
+          <h3>Surveillance Drone</h3>
+          <p>IoT + Real-Time Vision</p>
+        </div>
+        <div class="back">
+          <p>Real-time surveillance drone with camera and sensor control, enabling remote monitoring via FPV and Wi-Fi.</p>
+          <a href="drone.html" target="_blank">Project Details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Smart Home Automation Project -->
+    <div class="card">
+      <div class="inner">
+        <div class="front" style="background-color: #000;">
+          <img src="images\SMART HA.jpg" alt="Smart Home Automation" style="width:100%; height:150px; object-fit:cover; border-radius:10px;">
+          <h3>Smart Home Automation</h3>
+          <p>NodeMCU + Voice Assist</p>
+        </div>
+        <div class="back">
+          <p>Controlled appliances via Google Assistant and Blynk app using NodeMCU. Enabled remote IoT home automation.</p>
+          <a href="sma.html" target="_blank">Project Details</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="Internships">
+<!-- Internships -->
+<section id="internships" style="padding: 2rem; max-width: 900px; margin: auto;">
+  <h2 class="section-title">Internships</h2>
+
+  <div style="margin-bottom: 1.5rem;">
+    <h3 style="margin-bottom: 0.5rem;">🔧 Embedded Systems Intern</h3>
+    <p><strong>COMPANY:</strong> EMGLITZ TECHNOLOGIES</p>
+    <p><strong>Duration:</strong> 4 Weeks</p>
+    <p><strong>Summary:</strong> Worked on real-time embedded applications using Arduino and ESP32. Built mini projects and attended live workshops on IoT and automation.</p>
+  </div>
+
+  <div>
+    <h3 style="margin-bottom: 0.5rem;">💻 Java Developer Intern</h3>
+    <p><strong>COMPANY:</strong> E-SOFT SOLUTIONS</p>
+    <p><strong>Duration:</strong> 4 Weeks</p>
+    <p><strong>Summary:</strong> Learned Basics of Java</p>
+  </div>
+
+</section>
+
+
+<section id="certificates">
+  <!-- Certificates -->
+  <section>
+    <h2 class="section-title">Certificates</h2>
+    <div class="certificates-list">
+      <div class="tag">Java Programming - Infosys Springboard</div>
+      <div class="tag">IoT with Arduino - Coursera</div>
+      <div class="tag">Frontend Web Dev - Great Learning</div>
+      <div class="tag">AI for Everyone - DeepLearning.ai</div>
+    </div>
+  </section>
+
+  <section id="sports">  
+  <!-- Sports -->
+  <section>
+    <h2 class="section-title">Sports Achievements</h2>
+    <div class="sports-list">
+      <div class="tag">🥎 UNIVERSITY PLAYER - ANNA UNIVERSITY</div>
+      <div class="tag">🥎 NATIONAL PLAYER - TAMILNADU</div>
+      <div class="tag">🥈 SOFTBALL TOURNAMENT - SECOND</div>
+    </div>
+  </section>
+
+  <!-- Languages Known -->
+<section id="languages" style="padding: 2rem; max-width: 900px; margin: auto;">
+  <h2 class="section-title">Languages Known</h2>
+  <ul style="line-height: 1.8;">
+    <li><strong>English:</strong> Fluent</li>
+    <li><strong>Tamil:</strong> Native Speaker</li>
+    <li><strong>Hindi:</strong> Basic Understanding</li>
+  </ul>
+</section>
+
+
+
+<!-- Hobbies -->
+<section id="hobbies" style="padding: 2rem; max-width: 900px; margin: auto;">
+  <h2 class="section-title">Hobbies</h2>
+  <ul style="list-style: square; padding-left: 1.5rem; line-height: 1.8;">
+    <li>Building Tech Gadgets (DIY Electronics)</li>
+    <li>Drone Flying & Tinkering</li>
+    <li>Competitive Coding (LeetCode / HackerRank)</li>
+    <li>Photography & Video Editing</li>
+    <li>Cricket, and Outdoor Games</li>
+    <li>Listening to Motivational Podcasts</li>
+  </ul>
+</section>
+
+  <section id="resume"> 
+  <!-- Resume -->
+  <!-- Resume Section -->
+<section class="resume">
+    <h2 class="section-title">Resume</h2>
+    
+    <a href="images\PREMKUMAR.S_VSBEC.pdf" target="_blank" class="btn">📄 View My Resume</a>
+  </section>
+  
+  <!-- Modal Popup -->
+  <div id="resumeModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:9999;">
+    <div style="position:relative; width:80%; max-width:800px; margin:50px auto; background:#111; padding:1rem; border-radius:10px; color:white;">
+      
+      <h3 style="text-align:center;">📄 Resume Preview</h3>
+      
+      <iframe src="C:\Users\Admin\Documents\MY PORTFOLIO\images\PREMKUMAR.S_VSBEC.pdf" width="100%" height="500px" style="border:none; margin-top:1rem;"></iframe>
+  
+      <div style="text-align:center; margin-top:1rem;">
+        <a href="images\PREMKUMAR.S_VSBEC.pdf" target="_blank" class="btn">📄 View My Resume</a>
+        <button onclick="closeModal()" style="margin-left:1rem; padding:0.6rem 1.2rem; background:#444; color:white; border:none; border-radius:8px; cursor:pointer;">
+          ❌ Close
+        </button>
+      </div>
+    </div>
+  </div>
+  <section id="contact"> 
+ <!-- Contact Section -->
+<section>
+  <h2 class="section-title">Contact Me</h2>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; align-items: flex-start; max-width: 1000px; margin: auto;">
+
+    <!-- Left: Personal Info -->
+    <div style="flex: 1; min-width: 250px;">
+      <h3>📇 Personal Info</h3>
+      <p><strong>Name:</strong> PREMKUMAR SIVAGIRIPALANISAMY</p>
+      <p><strong>Email:</strong> <a href="mailto:kumarprem48605@gmail.com" style="color:#00ffff;">kumarprem48605@gmail.com</a></p>
+      <p><strong>Phone:</strong> +91 6381328703</p>
+      <p><strong>Location:</strong> DINDIGUL,TAMIL NADU</p>
+      <p>
+        <strong>Social:</strong><br>
+        <a href="https://www.linkedin.com/in/premkumar-sivagiripalanisamy-363431280/" target="_blank" style="color:#00ffff;">LinkedIn</a> |
+        <a href="https://github.com/PREMKUMAR-S-VSB" target="_blank" style="color:#00ffff;">GitHub</a>
+      </p>
+    </div>
+
+    <!-- Right: Contact Form -->
+    <form action="https://formspree.io/f/yourFormID" method="POST" style="flex: 1; min-width: 280px;">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin: 8px 0; border-radius: 5px;"><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="_replyto" required style="width: 100%; padding: 10px; margin: 8px 0; border-radius: 5px;"><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; margin: 8px 0; border-radius: 5px;"></textarea><br>
+
+      <button type="submit" style="padding: 10px 20px; background-color: #00ffff; color: #000; border: none; border-radius: 5px; font-weight: bold;">Send</button>
+    </form>
+
+  </div>
+</section>
+<footer style="text-align: center; padding: 1rem; background: #111; color: #00ffff; font-size: 0.9rem; border-top: 1px solid #333; box-shadow: inset 0 1px 0 #222;">
+  © 2025 Prem Kumar. All Rights Reserved.
+</footer>
+
+
+
+</body>
+</html>
